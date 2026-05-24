@@ -1,0 +1,10 @@
+// Contoh mengambil data dari Google Apps Script
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzuuyzmLA5RPOajvIzFerJ4z62JD4ZRTXjAY5DkGZUYBgA68qZphmI_SNaoh_piaPacww/exec';
+
+fetch(scriptURL)
+  .then(response => response.json())
+  .then(data => {
+    console.log('Data dari Google Script:', data);
+    // Tampilkan data di halaman GitHub Pages Anda
+  })
+  .catch(error => console.error('Error:', error));
